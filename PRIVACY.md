@@ -1,6 +1,6 @@
 # Informativa sulla privacy — Slant Coach
 
-**Ultimo aggiornamento: 20 agosto 2026**
+**Ultimo aggiornamento: 9 ottobre 2026**
 
 *(English version below — [jump to it](#privacy-policy--slant-coach).)*
 
@@ -10,6 +10,10 @@ Slant Coach non ha il permesso di uscire in rete. Non è una promessa di buona c
 cosa che il telefono impedisce. Tutto quello che scrivi resta nella cartella privata dell'app,
 non c'è nessun account, nessun server, nessuna statistica e nessuna pubblicità. Niente di tuo
 lascia il telefono, a meno che non sia tu a mandarlo.
+
+Dal 9 ottobre 2026 c'è una cosa in più, spenta finché non la accendi: se vuoi, l'app scrive le
+sedute in **Health Connect**, l'archivio della salute che Android tiene sullo stesso telefono.
+Cosa scrive e cosa no è spiegato [più sotto](#health-connect).
 
 ## Chi tratta i dati
 
@@ -51,7 +55,9 @@ codice che ti identifichi fra un'installazione e l'altra.
 - Nessuna statistica d'uso, nessun servizio di analisi, nessun rilevatore di crash di terze
   parti, nessuna pubblicità, nessun profilamento.
 - Nessun dato venduto, ceduto o condiviso con nessuno: non c'è il canale per farlo.
-- Nessuna copia in cloud fatta dall'app.
+- Nessuna copia in cloud: l'app esclude i suoi dati anche dal backup automatico di Android su
+  Google Drive. Passano da un telefono all'altro solo col trasferimento diretto fra telefoni, o
+  con la copia di sicurezza che salvi tu.
 
 Se guardi i permessi trovi `ACCESS_NETWORK_STATE`, e va spiegato invece di lasciarlo scoprire:
 lo aggiunge la libreria di sistema che fa scattare i promemoria, e serve a sapere **se** il
@@ -65,9 +71,10 @@ telefono è connesso, non a connettersi.
 | Avvio del telefono | Riprogrammare i promemoria dopo un riavvio |
 | Vibrazione | I segnali durante la seduta |
 | Riconoscimento attività | Contare i passi durante la camminata |
-| Posizione precisa | Disegnare il percorso della camminata |
+| Posizione precisa e approssimativa | Disegnare il percorso della camminata (Android chiede le due insieme) |
 | Servizio in primo piano (posizione) | Continuare a segnare il percorso a schermo spento |
 | Mantenere il telefono sveglio | Non interrompere una seduta in corso |
+| Health Connect: scrivere esercizio e passi | Registrare le sedute in Health Connect, solo se lo accendi tu |
 
 Sulla posizione, due precisazioni che contano. L'app chiede solo il permesso **«mentre usi
 l'app»**, non quello di sfondo. E la registrazione parte solo quando avvii tu una camminata:
@@ -76,23 +83,58 @@ che hai finito.
 
 ## Cosa può uscire dal telefono, e solo se lo decidi tu
 
-Ci sono tre cose che puoi mandare a qualcuno, ognuna con un'azione esplicita:
+Ci sono quattro cose che puoi mandare a qualcuno, ognuna con un'azione esplicita:
 
 1. **La cartolina** con i tuoi giorni di fila: apre il normale foglio di condivisione di
    Android e sei tu a scegliere a chi.
 2. **La copia di sicurezza** dei tuoi dati: la salvi dove vuoi tu.
-3. **Il diario tecnico**, se ti va di segnalare un guasto. Contiene il modello del telefono, la
+3. **Le tabelle** in CSV — sedute e pesate — da aprire con un foglio di calcolo: le salvi dove
+   vuoi tu.
+4. **Il diario tecnico**, se ti va di segnalare un guasto. Contiene il modello del telefono, la
    versione di Android, le tracce degli errori e le operazioni recenti dell'app. Non contiene
    il tuo nome, il tuo peso, né i percorsi delle camminate.
 
-In tutti e tre i casi il destinatario lo scegli tu, e da quel momento valgono le regole
+In tutti i casi il destinatario lo scegli tu, e da quel momento valgono le regole
 dell'app a cui lo hai mandato.
+
+## Health Connect
+
+Health Connect è l'archivio dei dati di salute e attività che Android tiene **sul telefono**: le
+app che ci scrivono e quelle che ci leggono le scegli tu, una per una, dalle sue impostazioni.
+
+**È spento finché non lo accendi** dalle impostazioni di Slant Coach. In quel momento Android ti
+chiede due permessi, e solo di scrittura:
+
+- **Esercizio** — per ogni seduta: inizio, fine e tipo (ginnastica a corpo libero, camminata,
+  corsa sul posto), con il titolo «Slant Coach».
+- **Passi** — per le camminate in cui il telefono li ha contati.
+
+Accendendolo, l'app scrive anche le sedute degli ultimi trenta giorni; da lì in poi ogni seduta
+nuova, e toglie da Health Connect quelle che annulli nell'app.
+
+Cosa **non** fa:
+
+- **Non legge niente** da Health Connect: non chiede nessun permesso di lettura.
+- **Non scrive le calorie**, né il peso, né i percorsi: le calorie sono stime e non devono
+  diventare, in un'altra app, un numero che sembra misurato.
+- Non passa per internet: Health Connect sta sul telefono, e l'app il permesso di rete continua a
+  non averlo.
+
+**Uso limitato.** I dati che l'app scrive in Health Connect servono solo a farteli ritrovare lì.
+Non vengono usati per pubblicità, non vengono venduti né ceduti, e l'app non ne fa nessun altro
+uso.
+
+Quello che sta in Health Connect lo vedono le app a cui **tu** dai il permesso di leggerlo, e da
+quel momento valgono le loro regole — alcune, per esempio, sincronizzano i dati sui propri server.
+Lo spegni dalle impostazioni di Slant Coach; togli i permessi e cancelli i dati da quelle di
+Health Connect.
 
 ## Dati sanitari e posizione
 
 Peso, altezza, allenamenti, passi e percorsi sono informazioni che riguardano la tua salute e
 i tuoi spostamenti, cioè fra le più delicate che esistano. Per questo stanno dove stanno e non
-si muovono: restano nella memoria privata del telefono e non vengono trasmesse.
+si muovono: restano nella memoria privata del telefono e non vengono trasmesse. L'unica
+eccezione è quella che scegli tu: le sedute e i passi in Health Connect, se lo accendi.
 
 Le calorie, la distanza in chilometri e il metabolismo basale sono **stime**, calcolate sul
 telefono da formule pubbliche a partire da quello che hai scritto tu. Non sono misure mediche
@@ -115,6 +157,10 @@ reimportare.
 Il solo diario tecnico si può cancellare quando vuoi dalle impostazioni, senza toccare il
 resto.
 
+**Health Connect è a parte**: quello che l'app ci ha scritto non sparisce disinstallandola, perché
+sta nell'archivio di Android e non nella cartella dell'app. Lo cancelli dalle impostazioni di
+Health Connect.
+
 ## I tuoi diritti
 
 Il GDPR ti dà diritto di accedere ai tuoi dati, correggerli, cancellarli, portarli via e
@@ -136,7 +182,7 @@ visibili nella cronologia di questo file su GitHub: non si può cambiare in sile
 
 # Privacy Policy — Slant Coach
 
-**Last updated: 20 August 2026**
+**Last updated: 9 October 2026**
 
 ## In two lines
 
@@ -144,6 +190,10 @@ Slant Coach does not have permission to go online. That's not a promise of good 
 phone itself prevents it. Everything you write stays in the app's private folder — no account,
 no server, no analytics, no advertising. Nothing of yours leaves the phone unless you send it
 yourself.
+
+Since 9 October 2026 there's one more thing, off until you turn it on: if you want, the app
+writes your sessions to **Health Connect**, the health store Android keeps on the same phone.
+What it writes and what it doesn't is explained [below](#health-connect-1).
 
 ## Who handles your data
 
@@ -185,7 +235,9 @@ installations.
 - No usage analytics, no analysis services, no third-party crash reporter, no advertising, no
   profiling.
 - No data sold, transferred or shared with anyone: there is no channel to do so.
-- No cloud copy made by the app.
+- No cloud copy: the app also excludes its data from Android's automatic backup to Google
+  Drive. It moves between phones only through a direct phone-to-phone transfer, or through the
+  backup you save yourself.
 
 If you check the permissions you'll find `ACCESS_NETWORK_STATE`, and it deserves explaining
 rather than being discovered: it's added by the system library that fires the reminders, and it
@@ -199,9 +251,10 @@ reports **whether** the phone is connected — it does not connect.
 | Boot completed | Rescheduling reminders after a restart |
 | Vibration | Cues during a session |
 | Activity recognition | Counting steps during a walk |
-| Precise location | Drawing your walking route |
+| Precise and approximate location | Drawing your walking route (Android asks for both together) |
 | Foreground service (location) | Keeping the route recording with the screen off |
 | Wake lock | Not interrupting a session in progress |
+| Health Connect: write exercise and steps | Recording your sessions in Health Connect, only if you turn it on |
 
 Two things about location that matter. The app only asks for the **"while using the app"**
 permission, not background location. And recording starts only when *you* start a walk: while
@@ -210,23 +263,57 @@ finished.
 
 ## What can leave the phone, and only if you decide
 
-Three things can be sent to someone, each by an explicit action:
+Four things can be sent to someone, each by an explicit action:
 
 1. **The postcard** with your streak: it opens Android's normal share sheet and you choose the
    recipient.
 2. **The backup** of your data: you choose where to save it.
-3. **The technical log**, if you want to report a fault. It contains your phone model, Android
+3. **The tables** in CSV — sessions and weigh-ins — to open with a spreadsheet: you choose where
+   to save them.
+4. **The technical log**, if you want to report a fault. It contains your phone model, Android
    version, error traces and the app's recent operations. It does not contain your name, your
    weight, or your walking routes.
 
-In all three cases you pick the recipient, and from that moment the rules of the app you sent
+In every case you pick the recipient, and from that moment the rules of the app you sent
 it to apply.
+
+## Health Connect
+
+Health Connect is the store of health and activity data that Android keeps **on the phone**: you
+choose, one by one in its settings, which apps write to it and which read from it.
+
+**It's off until you turn it on** in Slant Coach's settings. At that point Android asks you for
+two permissions, write-only:
+
+- **Exercise** — for each session: start, end and type (calisthenics, walking, running on the
+  spot), titled "Slant Coach".
+- **Steps** — for the walks where the phone counted them.
+
+When you turn it on, the app also writes the sessions from the last thirty days; from then on,
+every new session, and it removes from Health Connect the ones you cancel in the app.
+
+What it does **not** do:
+
+- **It reads nothing** from Health Connect: it asks for no read permission.
+- **It doesn't write calories**, weight or routes: calories are estimates, and shouldn't become,
+  in another app, a number that looks measured.
+- It doesn't go through the internet: Health Connect lives on the phone, and the app still has
+  no network permission.
+
+**Limited use.** The data the app writes to Health Connect is there only so that you find it
+there. It isn't used for advertising, isn't sold or transferred, and the app makes no other use
+of it.
+
+What's in Health Connect is visible to the apps **you** allow to read it, and from then on their
+rules apply — some, for instance, sync data to their own servers. You turn it off in Slant
+Coach's settings; you remove the permissions and delete the data in Health Connect's.
 
 ## Health data and location
 
 Weight, height, workouts, steps and routes concern your health and your movements — among the
 most sensitive information there is. That's why they stay where they are and don't move: in the
-phone's private storage, never transmitted.
+phone's private storage, never transmitted. The only exception is the one you choose: sessions
+and steps in Health Connect, if you turn it on.
 
 Calories, distance in kilometres and basal metabolism are **estimates**, computed on the phone
 from public formulas using what you entered. They are not medical measurements, and the app
@@ -247,6 +334,10 @@ the app.** That's why Settings offers a backup you can export and restore.
 
 The technical log alone can be deleted at any time from Settings, leaving everything else
 untouched.
+
+**Health Connect is separate**: what the app wrote there doesn't disappear when you uninstall it,
+because it lives in Android's store, not in the app's folder. You delete it from Health Connect's
+settings.
 
 ## Your rights
 
